@@ -1,6 +1,6 @@
 import Redis from "ioredis";
-import {createNewRating, getHour, getRedisKey} from "~/utils";
-import {RateData} from "~/types";
+import {createNewRating, getHour, getRedisKey} from "../../utils";
+import {RateData} from "../../types";
 
 export default defineEventHandler(async function (event) {
   const redis = new Redis(process.env.REDIS_URL as string);
