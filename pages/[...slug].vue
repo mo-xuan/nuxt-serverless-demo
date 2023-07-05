@@ -73,7 +73,7 @@ async function onChange (event: Event | false): Promise<void> {
   voted[path] = myRate.value
   localStorage.setItem(LOCAK_KEY, JSON.stringify(voted))
   pending.value = true
-  try {
+/*  try {
     const data = await $fetch('/api/rate', {
       method: 'POST',
       body: {
@@ -85,7 +85,7 @@ async function onChange (event: Event | false): Promise<void> {
     rateData.value = data as RateData
   } catch (e) {
     message.value = (e as Error).message || Object.prototype.toString.call(e)
-  }
+  }*/
   pending.value = false
 }
 
